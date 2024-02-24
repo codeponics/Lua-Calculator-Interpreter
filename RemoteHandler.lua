@@ -8,8 +8,4 @@ game.ReplicatedStorage.Process.OnServerInvoke = function(player: Player, expr: s
 	end
 	local tree = parser.new(tokenizer.tokenize(expr)) 
 	return tostring(tree)..' = '..tostring(nodes.Visit(tree).value)
-	--[[local suc, result = pcall(function()
-		return parser.new():parse(tokenizer.tokenize(expr))
-	end)
-	return result]]
 end
